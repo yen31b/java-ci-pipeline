@@ -1,12 +1,12 @@
 language: java
 before_install:
   - sudo apt-get install ant-optional
-
+dist: trusty
 addons:
   sonarcloud:
-    organization: "yen31b" # the key of the org you chose at step #3
+    organization: "yen31b"
     token:
-      secure: "F9xfFyWlyt39jBmKQPcPOXHBOt/9R2fI1mZTGdsFNZh1VD8FXei8TTrCJfHd2DImkU2hTwLnbkYE+Ez2Eb6cvJE0m/QdfJD0WKA8Qs6FLdCxFIoHPiRf9WB0GA0CgIU9YrkrQBCE8iRYhM1J9J8Wfmw3BifnJgbh4128S5nf6itgvLLfVVFS31I87FBKrAXrM1gPekGuoDBBggKCIIjfhqpVoJCX+NINOk1k2GgXNl/ekU5EIbmyrLZKwFici28Oim/UADHUvWK7vAqePPPyKhF9M66prXjchGqoQK4aQtnv9KwPyLW+k1TuD2EuKeLNDDIN2zuMTr9/W3nY0d6dDXsi/P/ASpJmE9XFJewULb5jQmEjIKfEwJu9xfC2hmrrfRH8KlcEZ9CGRtZeo3uHfGejzdBbHeIomuOzjQVf50wpiGT2rCQ7HVKsEvlUbuNSdTw6JAVxfyBI3X2Vzg686BlIcBZns4yx5A/iYZVefcsK+m+BQejy6enMoFzIW+noF76TAyyA29VyOf3PI5NyeuoMvz+Qnn/wywTairEy0x9QVMoDyDcSfzrQKv6j57PN+LLtvNqjNgMV9mb6HrzABf54Nz6dH0U34iZeJW51MUkSilEo+FvbRSfKLTFw5yX8f5w7ht33+6qNqTVSrZoOZOwjZ8anZ8cktXCqp7rvZsk="
+      secure: "NvPZnD5IxfFjWV25xzg8eMaT9cnQGInsa1egWRN/D6++EPU3PA8/XqD85brrkPeOFC2h6HYQMSitfo4aFCjx68KugjK8Rvkw5f7YcBBZ50HkAQGF7blP1JZZioXeAOep8B+Z5BLrFDX3pDclfHvGLxuZeLnUGR5TjV+IJJ0TraHrXygkAlwxqWEEQFr/LcvYmypq7NyWxgL58UPcga/XvQGWvBUg6nZgTJ6jyhfh3/Vm04KdvUXPA9h2D0r/fMzOYjNmw8iVRshQWKJs0t45THRglad0fyyjq5VKNoJx3nU4UQp8rx6cd1yx5mRndgvCkrORmKoBqLYvHOHombEDvNlKGm5zIXathCVLBGi27zceefZomjIKGjBHlxkxxqGYGE7g0x2z1kgK4Xb7wP2DrAxkTPqjBNiIYtAPVjf46w6JbLBK6dDa4HNl5oYlkZRoBaQ0P6HS7B+zySMBTFc5BLr5x62+/ELiiK6L73tXX0UAz6LpR78w+RSJSok+eqQ6UfF9lD5xSL98uFAejytZGU3oj+Iu1FjqwzGTXm+LGjavFhm1mAdmQYmxTVHi3RaQ1JL448XZXC5OLBIZmWo2kgmotZZ2q6IFQuoM0bJfo1gmvFHB9DIDHgG6pNrQu5h1Qnww5h4hvBCBt1ZBCkEC5VvEMWoIqjB/ByiAWwFGceY="
 script:
-  # other script steps might be done before running the actual analysis
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
   - sonar-scanner
