@@ -121,7 +121,7 @@
     <junit printsummary="yes" haltonfailure="yes">
 
       <classpath location="lib/junit-4.12.jar" />
-      <classpath location="lib/hamcrest-core-1.3.jar" />
+      <classpath location="lib/hamcrest-core-1.3.jar"/>
 
       <classpath>
 
