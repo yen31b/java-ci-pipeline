@@ -1,7 +1,7 @@
+import org.junit.Test;
 
-import junit.framework.TestCase;
 
-public class testMain extends TestCase{
+public class testMain {
 
     private Main m;
 
@@ -9,24 +9,29 @@ public class testMain extends TestCase{
         m = new Main();
     }
 
-    public void testsumar (){
+    @Test
+    public void sumar() {
         escenario();
-        assertTrue(m.sumar(2 , 2) == (2 + 2));
+        assert(m.sumar(2 , 2) == (2 + 2));
     }
 
-    public void testrestar (){
+    @Test
+    public void restar() {
         escenario();
-        assertTrue(m.restar(5 , 2 ) == (5-2));
+        assert(m.restar(3 , 2) == (3 - 2));
     }
 
-    public void testmulti (){
+    @Test
+    public void multiplicar() {
         escenario();
-        assertTrue( m.multiplicar(2 , 3 ) == (2*3));
+        assert(m.multiplicar(3 , 2) == (3 * 2));
+
     }
 
-    public void testdividir (){
+    @Test
+    public void dividir() {
         escenario();
-        assertTrue( m.dividir(6 , 2 ) == (6/2));
-    }
+        assert(m.dividir(6 , 2) == (6 / 2));
 
+    }
 }
