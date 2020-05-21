@@ -116,8 +116,24 @@
   
   <target name="all" depends="build.modules" description="build all"/>
 
-  <target name="test" depends="compile.module.calculadora.tests">
+  <target name="test" >
 
+    <junit printsummary="yes" haltonfailure="yes">
+
+      <classpath>
+        <pathelement location="${calculadora.output.dir}"/>
+        <pathelement location="${calculadora.testoutput.dir}"/>
+        <pathelement path="${java.class.path}"/>
+      </classpath>
+
+      <test name="test.testMain"
+            haltonfailure="no" outfile="result">
+
+        <formatter type="plain"/>
+        <formatter type="xml"/>
+
+      </test>
+
+    </junit>
   </target>
-
 </project>
