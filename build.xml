@@ -115,4 +115,9 @@
   <target name="build.modules" depends="init, clean, compile.module.calculadora" description="build all modules"/>
   
   <target name="all" depends="build.modules" description="build all"/>
+
+  <target name="test" depends="">
+
+  </target>
+
 </project>
