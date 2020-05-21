@@ -116,8 +116,7 @@
   
   <target name="all" depends="build.modules" description="build all"/>
 
-  <target name="test" depends="">
-
+  <target name="test" depends="module_calculadora.compile.module.calculadora.tests">
   </target>
 
 </project>
