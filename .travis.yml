@@ -1,3 +1,12 @@
 language: java
 before_install:
   - sudo apt-get install ant-optional
+
+addons:
+  sonarcloud:
+    organization: "yen31b" # the key of the org you chose at step #3
+    token:
+      secure: "F9xfFyWlyt39jBmKQPcPOXHBOt/9R2fI1mZTGdsFNZh1VD8FXei8TTrCJfHd2DImkU2hTwLnbkYE+Ez2Eb6cvJE0m/QdfJD0WKA8Qs6FLdCxFIoHPiRf9WB0GA0CgIU9YrkrQBCE8iRYhM1J9J8Wfmw3BifnJgbh4128S5nf6itgvLLfVVFS31I87FBKrAXrM1gPekGuoDBBggKCIIjfhqpVoJCX+NINOk1k2GgXNl/ekU5EIbmyrLZKwFici28Oim/UADHUvWK7vAqePPPyKhF9M66prXjchGqoQK4aQtnv9KwPyLW+k1TuD2EuKeLNDDIN2zuMTr9/W3nY0d6dDXsi/P/ASpJmE9XFJewULb5jQmEjIKfEwJu9xfC2hmrrfRH8KlcEZ9CGRtZeo3uHfGejzdBbHeIomuOzjQVf50wpiGT2rCQ7HVKsEvlUbuNSdTw6JAVxfyBI3X2Vzg686BlIcBZns4yx5A/iYZVefcsK+m+BQejy6enMoFzIW+noF76TAyyA29VyOf3PI5NyeuoMvz+Qnn/wywTairEy0x9QVMoDyDcSfzrQKv6j57PN+LLtvNqjNgMV9mb6HrzABf54Nz6dH0U34iZeJW51MUkSilEo+FvbRSfKLTFw5yX8f5w7ht33+6qNqTVSrZoOZOwjZ8anZ8cktXCqp7rvZsk="
+script:
+  # other script steps might be done before running the actual analysis
+  - sonar-scanner
